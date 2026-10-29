@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Ujian Semester Tingkat Kecamatan - Portal CBT & Penilaian SD</title>
+    <meta name="description" content="Aplikasi CBT dan Pengelolaan Ujian Semester Sekolah Dasar Tingkat Kecamatan dengan Multi-Role (Admin, Guru, Siswa), Bank Soal, Integrasi Google Spreadsheet & Excel, serta Cetak Nilai." />
+    <meta property="og:title" content="Sistem Ujian Semester Tingkat Kecamatan" />
+    <meta property="og:description" content="Aplikasi CBT dan Pengelolaan Ujian Semester Sekolah Dasar Tingkat Kecamatan dengan Multi-Role (Admin, Guru, Siswa), Bank Soal, Integrasi Google Spreadsheet & Excel, serta Cetak Nilai." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #0c0c0e;
+        --surface: #161619;
+        --ink: #f2f2f2;
+        --ink-muted: rgba(242, 242, 242, 0.6);
+        --ink-faint: rgba(242, 242, 242, 0.1);
+        --accent: #4f46e5;
+        --accent-glow: rgba(79, 70, 229, 0.35);
+      }
+      /* Pengetikan teks berwarna merah */
+      input[type="text"],
+      input[type="password"],
+      input[type="email"],
+      input[type="number"],
+      input[type="search"],
+      input[type="tel"],
+      input:not([type]),
+      textarea {
+        color: #ef4444 !important;
+        caret-color: #ef4444 !important;
+        font-weight: 600 !important;
+      }
+      input:focus, textarea:focus {
+        color: #ef4444 !important;
+        caret-color: #ef4444 !important;
+      }
+      input::placeholder, textarea::placeholder {
+        color: #94a3b8 !important;
+        font-weight: normal !important;
+      }
+      .dark input::placeholder, .dark textarea::placeholder {
+        color: rgba(255, 255, 255, 0.4) !important;
+      }
+      input::selection, textarea::selection {
+        background: #ef4444 !important;
+        color: #ffffff !important;
+      }
+      body {
+        font-family: 'Geist', system-ui, -apple-system, sans-serif;
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+      html.dark body {
+        background-color: #0c0c0e;
+        color: #f2f2f2;
+      }
+      html.light body {
+        background-color: #f8fafc;
+        color: #0f172a;
+      }
+      .font-syne {
+        font-family: 'Syne', sans-serif;
+      }
+      .font-geist {
+        font-family: 'Geist', sans-serif;
+      }
+      .font-mono, .font-geist-mono {
+        font-family: 'Geist Mono', monospace;
+      }
+      ::selection {
+        background: #4f46e5;
+        color: #ffffff;
+      }
+      @media print {
+        @page {
+          size: A4 portrait;
+          margin: 12mm 15mm;
+        }
+        .no-print {
+          display: none !important;
+        }
+        .print-only {
+          display: block !important;
+        }
+        body {
+          background: white !important;
+          color: black !important;
+          font-family: system-ui, -apple-system, sans-serif !important;
+        }
+        table {
+          page-break-inside: auto;
+        }
+        tr {
+          page-break-inside: avoid;
+          page-break-after: auto;
+        }
+        thead {
+          display: table-header-group;
+        }
+        .break-inside-avoid {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-[#0c0c0e] text-[#f2f2f2] antialiased selection:bg-indigo-600 selection:text-white min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

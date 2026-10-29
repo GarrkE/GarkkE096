@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+/* ========================================================
+   WARNA HURUF PENGETIKAN: MERAH SAAT DIKETIK
+   (Semua input, password, teks, textarea berhuruf merah)
+   ======================================================== */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input:not([type]),
+textarea {
+  color: #ef4444 !important; /* Warna teks merah cerah & tegas */
+  caret-color: #ef4444 !important; /* Kursor pengetikan merah */
+  font-weight: 600 !important;
+}
+
+input:focus,
+textarea:focus,
+input:active,
+textarea:active {
+  color: #ef4444 !important;
+  caret-color: #ef4444 !important;
+}
+
+/* Placeholder tetap abu-abu netral agar mudah dibaca sebelum diketik */
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8 !important;
+  font-weight: 400 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+  font-weight: 400 !important;
+}
+
+input::selection,
+textarea::selection {
+  background-color: #ef4444 !important;
+  color: #ffffff !important;
+}
+
+/* ========================================================
+   DUKUNGAN MODE SIANG DAN MODE MALAM (DAY & NIGHT THEME)
+   ======================================================== */
+:root {
+  --color-accent: #4f46e5;
+  --color-accent-glow: rgba(79, 70, 229, 0.35);
+}
+
+/* Mode Siang (Light) */
+html.light,
+body.light {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Mode Malam (Dark / Obsidian Cyber) */
+html.dark,
+body.dark {
+  background-color: #0c0c0e !important;
+  color: #f2f2f2 !important;
+}
+
+/* Penyesuaian Komponen di Mode Malam */
+html.dark .bg-white,
+body.dark .bg-white {
+  background-color: #161619 !important;
+  color: #f2f2f2 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html.dark .bg-slate-50,
+body.dark .bg-slate-50 {
+  background-color: #0c0c0e !important;
+  color: #f2f2f2 !important;
+}
+
+html.dark .bg-slate-100,
+body.dark .bg-slate-100 {
+  background-color: #1f1f24 !important;
+  color: #f2f2f2 !important;
+}
+
+html.dark .border-slate-200,
+html.dark .border-slate-100,
+html.dark .border-slate-300,
+body.dark .border-slate-200,
+body.dark .border-slate-100,
+body.dark .border-slate-300 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html.dark .text-slate-900,
+html.dark .text-slate-800,
+html.dark .text-slate-700,
+body.dark .text-slate-900,
+body.dark .text-slate-800,
+body.dark .text-slate-700 {
+  color: #f2f2f2 !important;
+}
+
+html.dark .text-slate-500,
+html.dark .text-slate-600,
+body.dark .text-slate-500,
+body.dark .text-slate-600 {
+  color: rgba(242, 242, 242, 0.6) !important;
+}
+
+html.dark .divide-slate-200 > :not([hidden]) ~ :not([hidden]),
+body.dark .divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Cetak A4 tetap putih dan hitam */
+@media print {
+  html, body, .bg-white, .bg-slate-50, .bg-slate-100 {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  input, textarea {
+    color: #000000 !important;
+  }
+}

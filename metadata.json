@@ -1,0 +1,6 @@
+{
+  "name": "Sistem Ujian Semester Tingkat Kecamatan",
+  "description": "Aplikasi CBT dan Pengelolaan Ujian Semester Sekolah Dasar Tingkat Kecamatan dengan Multi-Role (Admin, Guru, Siswa), Bank Soal, Integrasi Google Spreadsheet & Excel, serta Cetak Nilai.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
